@@ -30,16 +30,13 @@ def insert_clean_urls(urls):
 def is_url_cleaned(url):
     return cleaned_collection.find_one({"url": url}) is not None
 
-
-
-
+# save data in the applications
 def insert_pdf_book_url(url, reason="pdf_or_book"):
     if not pdf_book_collection.find_one({"url": url}):
         pdf_book_collection.insert_one({
             "url": url,
             "reason": reason,
-            "timestamp": datetime.utcnow()
-        })
+            "timestamp": datetime.utcnow() })
 
 
 
@@ -48,5 +45,4 @@ def insert_youtube_url(url, reason="youtube_link"):
         youtube_collection.insert_one({
             "url": url,
             "reason": reason,
-            "timestamp": datetime.utcnow()
-        })
+            "timestamp": datetime.utcnow()})
