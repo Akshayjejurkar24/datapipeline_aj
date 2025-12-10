@@ -3,7 +3,7 @@
 from pymongo import MongoClient
 from datetime import datetime
 # DB setup
-MONGO_URI = "mongodb://localhost:27017/"
+MONGO_URI = "mogodb_path"
 DB_NAME = "local"
 COLLECTION_NAME = "Newscrappeddata"
 client = MongoClient(MONGO_URI)
